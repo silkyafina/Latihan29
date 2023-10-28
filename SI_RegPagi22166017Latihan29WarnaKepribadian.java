@@ -9,8 +9,8 @@ import java.util.Scanner;
  */
 public class SI_RegPagi22166017Latihan29WarnaKepribadian {
     public static void main(String[]args){
-        // 
-        String warna = "\u001b[0m";
+// deklarasi warna foreground
+        String penutup = "\u001b[0m";
         String foregroundMerah = "\u001b[31m";
         String foregroundHijau = "\u001b[32m";
         String foregroundKuning = "\u001b[33m";
@@ -18,37 +18,45 @@ public class SI_RegPagi22166017Latihan29WarnaKepribadian {
         String foregroundUngu = "\u001b[35m";
         String foregroundCyan = "\u001b[36m";
         
+        // deklarasi warna background
         String backgroundMerah = "\u001b[41m";
         String backgroundHijau = "\u001b[42m";
         String backgroundKuning = "\u001b[43m";
         String backgroundBiru = "\u001b[44m";
         String backgroundUngu = "\u001b[45m";    
         
-        Scanner input = new Scanner(System.in);
-        System.out.print(foregroundMerah+"YUK "+warna);
-        System.out.println(foregroundHijau+"CEK"+warna);
-        System.out.print(foregroundKuning+"KEPRIBADIANMU "+warna);
-        System.out.print(foregroundCyan+"DARI "+warna);
-        System.out.print(foregroundUngu+"WARNA "+warna);
-        System.out.print(foregroundBiru+"FAVORITMU \n"+warna);
+       // menampilkan teks berwarna
+        Scanner scanner = new Scanner(System.in);
+        System.out.print(foregroundMerah+"YUK "+penutup);
+        System.out.println(foregroundHijau+"CEK"+penutup);
+        System.out.print(foregroundKuning+"KEPRIBADIANMU "+penutup);
+        System.out.print(foregroundCyan+"DARI "+penutup);
+        System.out.print(foregroundUngu+"WARNA "+penutup);
+        System.out.print(foregroundBiru+"FAVORITMU \n"+penutup);
         
-        System.out.println(backgroundMerah+"        MERAH     "+warna);
-        System.out.println(backgroundHijau+"        HIJAU     "+warna);
-        System.out.println(backgroundKuning+"        KUNING    "+warna);
-        System.out.println(backgroundBiru+"        BIRU      "+warna);
-        System.out.println(backgroundUngu+"        UNGU      "+warna+"\n");
+        // menampilkan warna
+        System.out.println(backgroundMerah+"        MERAH     "+penutup);
+        System.out.println(backgroundHijau+"        HIJAU     "+penutup);
+        System.out.println(backgroundKuning+"        KUNING    "+penutup);
+        System.out.println(backgroundBiru+"        BIRU      "+penutup);
+        System.out.println(backgroundUngu+"        UNGU      "+penutup+"\n");
         
+        // menginputkan warna favorit dan nama 
         System.out.print("PILIH WARNA FAVORITMU : ");
-        String warna_favorit = input.next();
+        String warna = scanner.next();
         System.out.print("NAMA KAMU : ");
-        String nama = input.next();
+        String nama = scanner.next();
         
-        System.out.println("\n==== HASIL TEST KEPRIBADIAN " + nama +" ====");
+        // menampilkan warna favorit
+        System.out.println("\n====HASIL TEST KEPRIBADIAN " + nama +"====");
         System.out.print("Warna favoritmu adalah ");
         
-        switch (warna){
+        // deskripsi warna
+        switch (warna) {
             case "merah":
-                System.out.println(foregroundMerah+"merah"+warna);
+            case "Merah":
+            case "MERAH":
+                System.out.println(foregroundMerah+"Merah"+penutup);
                 System.out.println("""
                                    1. Periang,
                                    2. Pemberani,
@@ -59,7 +67,9 @@ public class SI_RegPagi22166017Latihan29WarnaKepribadian {
                                    7. Memiliki energi kehangatan dan cinta.""");
                 break;
             case "hijau":
-                System.out.println(foregroundHijau+"hijau"+warna);
+            case "Hijau":
+            case "HIJAU":
+                System.out.println(foregroundHijau+"Hijau"+penutup);
                 System.out.println("""
                                    1. Romantis,
                                    2. Menyukai hal yang berbau alami dan keindahan,
@@ -69,7 +79,9 @@ public class SI_RegPagi22166017Latihan29WarnaKepribadian {
                                    6. Menjunjung tinggi suatu nilai toleransi dan kepercayaan.""");
                 break;
             case "kuning":
-                System.out.println(foregroundKuning+"kuning"+warna);
+            case "Kuning":
+            case "KUNING":
+                System.out.println(foregroundKuning+"Kuning"+penutup);
                 System.out.println("""
                                    1. Optimis,
                                    2. Suka bergaul,
@@ -83,7 +95,9 @@ public class SI_RegPagi22166017Latihan29WarnaKepribadian {
                                    10.Cenderung penakut.""");
                 break;
             case "biru":
-                System.out.println(foregroundBiru+"biru"+warna);
+            case "Biru":
+            case "BIRU"
+                System.out.println(foregroundBiru+"Biru"+penutup);
                 System.out.println("""
                                    1. menyenangkan,
                                    2. Bijaksana,
@@ -95,7 +109,9 @@ public class SI_RegPagi22166017Latihan29WarnaKepribadian {
                                    8. Menyembunyikan perasaan karena karakternya yang cenderung mencari damai.""");
                 break;
             case "ungu":
-                System.out.println(foregroundUngu+"ungu"+warna);
+            case "Ungu":
+            case "UNGU":
+                System.out.println(foregroundUngu+"Ungu"+penutup);
                 System.out.println("""
                                    1. Optimis,
                                    2. Tidak pernah ragu,
@@ -103,10 +119,10 @@ public class SI_RegPagi22166017Latihan29WarnaKepribadian {
                                    4. Memiliki ambisi yang besar,
                                    5. Memiliki empati yang besar,
                                    6. Memiliki sisi misterius sebab seringkali menutupi perasaannya,
-                                   7.Terkadang bersikap keras kepala dan angkuh.""");
+                                   7.Terkadang bersikap keras kepala dan angkuh""");
                 break;
             default:
-                
+
                 System.out.println("Warna yang Anda masukkan tidak valid.");
                 break;
         } 
